@@ -4,13 +4,20 @@ using UnityEngine;
 
 public class Gun : MonoBehaviour
 {
-    public GameObject prefabBullet;
-    public Transform startingPos;
-    public float bulletSpeed;
-    public Camera fpsCam;
-    public float range = 100.0f;
-    public float damageAmount = 20.0f;
-    public GameObject flare;
+    [SerializeField]
+    private GameObject prefabBullet;
+    [SerializeField]
+    private Transform startingPos;
+    [SerializeField]
+    private float bulletSpeed;
+    [SerializeField]
+    private Camera fpsCam;
+    [SerializeField]
+    private float range = 100.0f;
+    [SerializeField]
+    private float damageAmount = 20.0f;
+    [SerializeField]
+    private GameObject flare;
 
     void FireBullet()
     {
