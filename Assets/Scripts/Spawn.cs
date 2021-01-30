@@ -8,6 +8,9 @@ public class Spawn : MonoBehaviour
     private Transform objectPos;
 
     [SerializeField]
+    private Transform refRotation;
+
+    [SerializeField]
     private GameObject ob;
 
     [SerializeField]
@@ -27,7 +30,7 @@ public class Spawn : MonoBehaviour
     {
 
         spawnTimeLimit += Time.time;
-        Instantiate(ob, objectPos.position,Quaternion.identity); 
+        Instantiate(ob, objectPos.position,refRotation.rotation); 
     }
  
     // Update is called once per frame
