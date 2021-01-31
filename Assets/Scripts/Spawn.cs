@@ -15,7 +15,7 @@ public class Spawn : MonoBehaviour
 
     [SerializeField]
     private float spawnTimeLimit = 3f;
-    //private GameObject;
+
     // Start is called before the first frame update
     private void Awake()
     {

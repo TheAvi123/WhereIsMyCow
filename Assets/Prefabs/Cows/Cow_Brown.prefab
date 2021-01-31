@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 9164496437242623051}
   - component: {fileID: 8487933680435585785}
   - component: {fileID: 1364340085451931054}
+  - component: {fileID: 106280905376655925}
   m_Layer: 0
   m_Name: Cow_Brown
   m_TagString: Untagged
@@ -81,3 +82,17 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &106280905376655925
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5765528869333963890}
+  m_Material: {fileID: 13400000, guid: 01571ba68fb2dad46aa03094ab219579, type: 2}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -3331477938184774458, guid: c9eea1ad2f4842f429ab3d5ce7b84f0f, type: 3}

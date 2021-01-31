@@ -7,6 +7,9 @@ TagManager:
   - cow
   - Fire
   - SpawnPoint_Small
+  - bullet
+  - SpawnPoint_Mid
+  - SpawnPoint_Big
   layers:
   - Default
   - TransparentFX

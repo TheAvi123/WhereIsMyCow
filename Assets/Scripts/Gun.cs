@@ -27,9 +27,9 @@ public class Gun : MonoBehaviour
             Target t = hit.transform.GetComponent<Target>();
             if (t != null)
             {
-                t.TakeDamage(damageAmount);
+                t.TakeDamage(damageAmount,ref t);
             }
-            // Debug.Log(hit.transform.name);
+             Debug.Log(hit.transform.name);
             GameObject flareAffect = Instantiate(flare, hit.point, Quaternion.LookRotation(hit.normal));
             Destroy(flareAffect, 0.2f);
             

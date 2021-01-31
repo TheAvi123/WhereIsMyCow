@@ -2,63 +2,55 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-class SpawnObjects
-{
-    public string tag;
-    public PrimitiveType spawnedObject;
-    public Transform spawnPoint;
-    public bool isAlive;
 
-}
 public class Spawn_random : MonoBehaviour
 {
 
-    private List<SpawnObjects> spawns = new List<SpawnObjects>();
+   
+    [SerializeField]
+    private List<Transform> cowLocations;
+    [SerializeField]
+    private List<GameObject> cowPrefabs;
 
-    private void InitSpawnObjects()
+
+    public void KillObject(string objectTag)
     {
-        // Init small_spawns
-        var smallSpawn = GameObject.FindGameObjectsWithTag("SpawnPoint_Small");
-        if (smallSpawn.Length > 0 )
-        {
-
-            foreach (var e in smallSpawn)
-            {
-                SpawnObjects so = new SpawnObjects();
-                so.tag = "small_" + e.name;
-                so.spawnPoint = e.transform;
-                so.isAlive = true;
-                so.spawnedObject = PrimitiveType.Cube;
-
-                spawns.Add(so);
-                //GameObject o = GameObject.CreatePrimitive(PrimitiveType.Cube);
-                //o.transform.position= e.transform.position;
-                //o.transform.rotation = e.transform.rotation;
-                //o.AddComponent<Target>();
-
-            }
-
-        }
+   
     }
-
     public void CreateSpawnObjects()
     {
-        InitSpawnObjects();
-        foreach (var e in spawns)
+        //InitSpawnObjects();
+        foreach (var e in cowLocations)
         {
-            GameObject o = GameObject.CreatePrimitive(e.spawnedObject);
-            o.transform.position = e.spawnPoint.position;
-            o.transform.rotation = e.spawnPoint.rotation;
+            GameObject o = Instantiate(cowPrefabs[Random.Range(0,cowPrefabs.Count)],e.position,e.rotation);
+            SpawnObjects so = new SpawnObjects();
+            so.tag = "Spawnpoint_Small_" + e.name;
+            so.isAlive = true;
+            so.spawnPoint = e.transform;
+           // CowStatus cs = o.AddComponent<CowStatus>();
+           // cs.cowStatus = so;
             o.AddComponent<Target>();
+            
         }
     }
     public void Start()
     {
         CreateSpawnObjects();
+   
+    }
+    public void Update()
+    {
+        //foreach (var e in cowLocations)
+        //{
+        //    //GameObject o = Instantiate(cowPrefabs[Random.Range(0, cowPrefabs.Count)], e.position, e.rotation);
+        //    //SpawnObjects so = new SpawnObjects();
+        //    //so.tag = "Spawnpoint_Small_" + e.name;
+        //    //so.isAlive = true;
+        //    //so.spawnPoint = e.transform;
+        //    //CowStatus cs = o.AddComponent<CowStatus>();
+        //    //cs.cowStatus = so;
+        //    //o.AddComponent<Target>();
 
-        foreach(var e in spawns)
-        {
-            print(e.tag);
-        }
+        //}
     }
 }
