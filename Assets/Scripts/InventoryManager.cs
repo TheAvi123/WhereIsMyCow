@@ -19,9 +19,9 @@ public class InventoryManager : MonoBehaviour
     }
 
     [SerializeField]
-    private GameObject inventoryItemImage;
+    public GameObject inventoryItemImage;
     [SerializeField]
-    private GameObject inventoryEmptyText;
+    public GameObject inventoryEmptyText;
 
     private GameObject itemBeingHeld;
 
@@ -36,7 +36,10 @@ public class InventoryManager : MonoBehaviour
             Destroy(gameObject);
         }
     }
-
+    public static ref InventoryManager GetInstance()
+    {
+        return ref Instance;
+    }
     // Update is called once per frame
     void Update()
     {
@@ -53,7 +56,9 @@ public class InventoryManager : MonoBehaviour
         else
         { //add item to inventory
             isFull = true;
-            inventoryItemImage.GetComponent<Image>().sprite = objectToAdd.GetComponent<Test_Cow>().spriteImage;
+           
+            inventoryItemImage.GetComponent<Image>().sprite = objectToAdd.GetComponent<CreateSprite>().GetSprite();
+            //inventoryItemImage.GetComponent<Image>().sprite =
             inventoryEmptyText.SetActive(false);
             inventoryItemImage.SetActive(true);
             itemBeingHeld = objectToAdd;
