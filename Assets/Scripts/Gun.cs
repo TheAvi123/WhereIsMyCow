@@ -47,7 +47,17 @@ public class Gun : MonoBehaviour
     {
         
     }
-
+    void DestroyBullet()
+    {
+        GameObject[] bullets = GameObject.FindGameObjectsWithTag("bullet");
+        foreach(var b in bullets)
+        {
+            if(Vector3.Distance(startingPos.position, b.GetComponent<Transform>().position) >= 90f)
+            {
+                Destroy(b);
+            }
+        }
+    }
     // Update is called once per frame
     void Update()
     {
@@ -62,5 +72,7 @@ public class Gun : MonoBehaviour
         {
             CancelInvoke("FireBullet");
         }
+
+        DestroyBullet();
     }
 }

@@ -1,5 +1,24 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &2295360908401071815
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1376882421329156663}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b736376dc628adb4d89cccd4bc4c0719, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefabBullet: {fileID: 2279888318236361608, guid: 67f855887613d8442856fa05fae73e64, type: 3}
+  startingPos: {fileID: 2295360908901197693}
+  bulletSpeed: 50
+  fpsCam: {fileID: 2295360909467649442}
+  range: 100
+  damageAmount: 50
+  flare: {fileID: 100006, guid: 0438351a6e6422d43a09930e9be00ee9, type: 3}
 --- !u!1 &2295360907749995705
 GameObject:
   m_ObjectHideFlags: 0
@@ -96,25 +115,6 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &2295360908401071815
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1376882421329156663}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b736376dc628adb4d89cccd4bc4c0719, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  prefabBullet: {fileID: 2279888318236361608, guid: 67f855887613d8442856fa05fae73e64, type: 3}
-  startingPos: {fileID: 2295360908901197693}
-  bulletSpeed: 50
-  fpsCam: {fileID: 2295360909467649442}
-  range: 100
-  damageAmount: 50
-  flare: {fileID: 100006, guid: 0438351a6e6422d43a09930e9be00ee9, type: 3}
 --- !u!1 &2295360908901197694
 GameObject:
   m_ObjectHideFlags: 0
@@ -267,7 +267,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2295360909469288322}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6.2, y: 1.88, z: 6.89}
+  m_LocalPosition: {x: 25, y: 1.88, z: 45}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2295360909469260704}
