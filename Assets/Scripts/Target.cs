@@ -14,14 +14,17 @@ public class Target : MonoBehaviour
 
     public void TakeDamage(float damage,ref Target t)
     {
-        health -= damage;
-        if (health <= 0.0f)
-        {
-
-            //CowStatus cs = gameObject.GetComponent<CowStatus>();
-            //cs.DeactivateCow();
-            Die();
-        }
+        //health -= damage;
+        //if (health <= 0.0f)
+        //{
+        
+        gameObject.SetActive(false); 
+          //Die();
+        //}
+    }
+    public GameObject GetParent()
+    {
+        return gameObject;
     }
 
     void Die()

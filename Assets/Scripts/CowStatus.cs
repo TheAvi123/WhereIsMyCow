@@ -8,7 +8,7 @@ public struct SpawnObjects
     public string tag;
     //public PrimitiveType spawnedObject;
     public Transform spawnPoint;
-    public bool isAlive;
+    public bool isCaptured;
     //public  cowType;
 
 }
@@ -22,10 +22,10 @@ public class CowStatus : MonoBehaviour
     {
         
     }
-    public void DeactivateCow()
+    public void ReleaseCow()
     {
         SpawnObjects so = new SpawnObjects();
-        so.isAlive = false;
+        so.isCaptured = false;
         so.spawnPoint = cowStatus.spawnPoint;
         so.tag = cowStatus.tag;
         cowStatus = so;
