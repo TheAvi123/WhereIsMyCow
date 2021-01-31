@@ -30,6 +30,7 @@ public class Gun : MonoBehaviour
             GameObject o = item.GetParent();
             Transform newTransform = Transform.Instantiate(item.transform, gameObject.transform.forward, item.GetParent().transform.rotation);
             o.transform.position = gameObject.transform.position;
+            o.transform.rotation = o.transform.rotation;
            
 
             o.SetActive(true);
