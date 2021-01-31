@@ -22,7 +22,9 @@ public class Spawn_random : MonoBehaviour
 
         foreach (var e in cowLocations)
         {
-            GameObject o = Instantiate(cowPrefabs[Random.Range(0,cowPrefabs.Count)],e.position,e.rotation);
+            int random = Random.Range(0, cowPrefabs.Count);
+            GameObject o = Instantiate(cowPrefabs[random],e.position,e.rotation);
+            o.transform.localScale = cowPrefabs[random].transform.localScale;
             SpawnObjects so = new SpawnObjects();
             so.tag = "Spawnpoint_Small_" + e.name;
             so.isCaptured = false;
