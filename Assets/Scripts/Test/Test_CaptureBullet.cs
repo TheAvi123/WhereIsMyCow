@@ -21,17 +21,21 @@ public class Test_CaptureBullet : MonoBehaviour
 
     private void OnTriggerEnter(Collider c)
     {
-        Debug.Log(c.gameObject.name);
-        GameObject maybeCow = c.gameObject.transform.parent.gameObject;
-
-
-        if (maybeCow.tag == "cow")
+        //Debug.Log(c.gameObject.name);
+        if (c.gameObject.transform.parent != null)
         {
-            //Try to add to inventory;
-            if (InventoryManager.Instance.TryAddToInventory(maybeCow))
+            GameObject maybeCow = c.gameObject.transform.parent.gameObject;
+
+
+            if (maybeCow.tag == "cow")
             {
-                maybeCow.SetActive(false);
+                //Try to add to inventory;
+                if (InventoryManager.Instance.TryAddToInventory(maybeCow))
+                {
+                    maybeCow.SetActive(false);
+                }
             }
         }
+        
     }
 }
