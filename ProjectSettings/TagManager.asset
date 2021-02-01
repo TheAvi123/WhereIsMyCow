@@ -5,6 +5,11 @@ TagManager:
   serializedVersion: 2
   tags:
   - cow
+  - Fire
+  - SpawnPoint_Small
+  - bullet
+  - SpawnPoint_Mid
+  - SpawnPoint_Big
   layers:
   - Default
   - TransparentFX

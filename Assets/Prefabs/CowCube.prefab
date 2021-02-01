@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 8818443354592500568}
   - component: {fileID: 7053790770699391673}
   - component: {fileID: 2763928838558372906}
+  - component: {fileID: -3806207182721123100}
   m_Layer: 0
   m_Name: CowCube
   m_TagString: cow
@@ -95,3 +96,16 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &-3806207182721123100
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6427416890113938715}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4a9f9a413474904983511e7e57c65a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 100
